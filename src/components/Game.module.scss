@@ -1,0 +1,13 @@
+.board {
+    margin: 0 10vh;
+    // display: flex;
+    // width: 80vw;
+    // max-height: 70vh;
+    // display: grid;
+    // grid-template-columns: repeat(5, 20vh);
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
