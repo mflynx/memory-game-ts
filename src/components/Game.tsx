@@ -1,23 +1,11 @@
 import { useState } from "react";
+import { instruments } from "./../data/musicCards";
+import {getAllCards, CardType} from "./../utils/CardSetup"
+import shuffleCards from "./../utils/Shuffle"
 import Card from "./Card";
-import { allCards } from "./../data/musicCards";
 import styles from "./Game.module.scss";
 
-export type CardType = {
-  id: string;
-  name: string;
-  image: string;
-  faceUp: boolean;
-};
-
-const shuffleCards = (arr: CardType[]) => {
-  //Fisher-Yates shuffle
-  for (let i = arr.length - 1; i > 0; i--) {
-    let j = Math.floor(Math.random() * (i + 1)); // random index from 0 to i
-    [arr[i], arr[j]] = [arr[j], arr[i]]; // swap elements array[i] and array[j]
-  }
-  return arr;
-};
+const allCards = getAllCards(instruments)
 
 function Game() {
   const [cards, setCards] = useState<CardType[]>(shuffleCards(allCards));

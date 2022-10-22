@@ -1,13 +1,19 @@
 .board {
-    margin: 0 10vh;
-    // display: flex;
-    // width: 80vw;
-    // max-height: 70vh;
-    // display: grid;
-    // grid-template-columns: repeat(5, 20vh);
+  margin: 0 10vh;
+  display: flex;
+  justify-content: center;
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 112px);
+    grid-template-rows: repeat(4, 132px);
+  }
+}
+
+@media (max-width: 768px) {
+  .board {
     .wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+      grid-template-columns: repeat(4, 80px);
+      grid-template-rows: repeat(5, 93px);
     }
+  }
 }

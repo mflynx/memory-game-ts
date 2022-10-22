@@ -9,9 +9,7 @@ import trumpet from "./../images/instruments/trumpet.png";
 import violin from "./../images/instruments/violin.png";
 import xylophone from "./../images/instruments/xylophone.png";
 
-import { CardType } from "../components/Game";
-
-const instruments: string[] = [
+export const instruments: string[] = [
   drums,
   flute,
   guitar,
@@ -23,16 +21,3 @@ const instruments: string[] = [
   violin,
   xylophone,
 ];
-
-const getCardName = (fileName: string) => {
-  return fileName.split(/\/|\./)[3];
-};
-
-export const allCards: CardType[] = [...instruments, ...instruments].map(
-  (card, i) => ({
-    id: "card" + i,
-    name: getCardName(card),
-    image: card,
-    faceUp: false,
-  })
-);
