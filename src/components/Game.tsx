@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
+// data and utils
 import { instruments } from "./../data/musicCards";
 import { getAllCards, CardType } from "./../utils/CardSetup";
 import shuffleCards from "./../utils/Shuffle";
+// components
 import Card from "./Card";
+import WinMessage from "./WinMessage";
+// styles
 import styles from "./Game.module.scss";
 
 const allCards = getAllCards(instruments);
@@ -73,18 +77,12 @@ function Game() {
       <div className={styles.header}>
         <div className={styles.headerWrapper}>
           {winner ? (
-            <>
-              <div>
-                <div>Bravissimo ! You won in {triesCount} tries.</div>
-                <div>Try a new best score ?</div>
-              </div>
-              <button onClick={resetGame}>play again</button>
-            </>
+            <WinMessage triesCount={triesCount} resetGame={resetGame}/>
           ) : (
             <>
-              <div>Number of tries: {triesCount}</div>
+              <div>Num. of tries: {triesCount}</div>
               {bestScore && <div>Best score: {bestScore}</div>}
-              <button onClick={resetGame}>reset game</button>
+              <div className="btn" onClick={resetGame}>reset game</div>
             </>
           )}
         </div>

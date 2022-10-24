@@ -2,13 +2,14 @@
 .App {
   text-align: center;
   font-family: "Montez", "Roboto", cursive;
-  font-size: 1.5em;
+  font-size: 2em;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-h1 {
-  margin-bottom: 8px;
+h1,
+h4 {
+  margin: 2px 0 4px;
 }
 
 .musicBackground {
@@ -20,8 +21,31 @@ h1 {
   opacity: 40%;
 }
 
+.btn {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid rgb(250 83 31 / 60%);
+  background-color: rgb(250 83 31 / 20%);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: small;
+  line-height: 1em;
+  cursor: pointer;
+}
+.btn:hover {
+  color: white;
+  border: 1px solid rgb(11 107 80 / 90%);
+  background-color: rgb(11 107 80 / 70%);
+}
+
 @media (max-width: 768px) {
+  .App {
+    font-size: 1.5em;
+  }
   .musicBackground {
     opacity: 20%;
+  }
+  .btn {
+    width: min-content;
   }
 }
