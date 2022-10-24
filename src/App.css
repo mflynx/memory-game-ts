@@ -1,11 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Montez&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montez&display=swap");
 .App {
   text-align: center;
-  font-family: 'Montez','Roboto', cursive;
+  font-family: "Montez", "Roboto", cursive;
   font-size: 1.5em;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+h1 {
+  margin-bottom: 8px;
 }
 
 .musicBackground {
@@ -14,5 +17,11 @@
   left: 0;
   top: 0;
   z-index: -1;
-  opacity: 60%;
+  opacity: 40%;
+}
+
+@media (max-width: 768px) {
+  .musicBackground {
+    opacity: 20%;
+  }
 }

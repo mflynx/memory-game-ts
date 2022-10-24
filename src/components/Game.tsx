@@ -12,13 +12,15 @@ function Game() {
   const [cardsPicked, setCardsPicked] = useState<CardType[]>([]);
   const [triesCount, setTriesCount] = useState<number>(0);
   const [pairsFound, setPairsFound] = useState<number>(0);
+  const [winner, setWinner] = useState<boolean>(false);
 
-  // console.log(cards);
+  const bestScore = localStorage.getItem("bestScore");
 
   const resetGame = () => {
     setCardsPicked([]);
     setTriesCount(0);
     setPairsFound(0);
+    setWinner(false);
     setCards(shuffleCards(allCards));
   };
 
@@ -58,14 +60,35 @@ function Game() {
   useEffect(() => {
     // check winner
     if (pairsFound === cards.length / 2) {
-      //do smth when winner
-      console.log("You won !!! in " + triesCount + " tries");
+      setWinner(true);
+      // save best score to local storage
+      if ((bestScore && triesCount < Number(bestScore)) || !bestScore) {
+        localStorage.setItem("bestScore", triesCount.toString());
+      }
     }
-  }, [pairsFound, cards.length, triesCount]);
+  }, [pairsFound, cards.length, triesCount, bestScore]);
 
   return (
     <div>
-      <button onClick={resetGame}>new game</button>
+      <div className={styles.header}>
+        <div className={styles.headerWrapper}>
+          {winner ? (
+            <>
+              <div>
+                <div>Bravissimo ! You won in {triesCount} tries.</div>
+                <div>Try a new best score ?</div>
+              </div>
+              <button onClick={resetGame}>play again</button>
+            </>
+          ) : (
+            <>
+              <div>Number of tries: {triesCount}</div>
+              {bestScore && <div>Best score: {bestScore}</div>}
+              <button onClick={resetGame}>reset game</button>
+            </>
+          )}
+        </div>
+      </div>
       <div className={styles.board}>
         <div className={styles.wrapper}>
           {cards.map((card) => (

@@ -1,3 +1,30 @@
+.header {
+  display: flex;
+  justify-content: center;
+  
+  .headerWrapper {
+    width: 560px;
+    height: 65px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: 800;
+    
+    button {
+      width: fit-content;
+      padding: 4px;
+      cursor: pointer;
+      border-radius: 4px;
+      border: 1px solid rgb(250 83 31 / 60%);
+      background-color: rgb(250 83 31 / 20%);
+    }
+    button:hover {
+      color: white;
+      border: 1px solid rgb(11 107 80 / 90%);
+      background-color: rgb(11 107 80 / 70%);
+    }
+  }
+}
 .board {
   margin: 0 10vh;
   display: flex;
@@ -10,6 +37,12 @@
 }
 
 @media (max-width: 768px) {
+  .header {
+    .headerWrapper {
+      min-width: 320px;
+      max-width: 370px;
+    }
+  }
   .board {
     .wrapper {
       grid-template-columns: repeat(4, 80px);
