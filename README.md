@@ -1,46 +1,32 @@
-# Getting Started with Create React App
+# Memory Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A memory game with React and Typescript.
+Play it directly [here](https://mflynx-memory-game.netlify.app/) and try to get the confetti in the least number of tries !
 
-## Available Scripts
+## Technologies used
 
-In the project directory, you can run:
+- React
+- Typescript
+- HTML
+- CSS/SCSS
 
-### `npm start`
+## How to install and launch the project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Make sure you have `node` and `npm` installed: `node -v` `npm -v`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The numbers printed indicate the version installed, if not download [node](https://nodejs.org/en/).
 
-### `npm test`
+- Clone this repo and install the dependencies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+git clone https://github.com/mflynx/open-food-browser.git
+cd open-food-browser
+npm install
+```
 
-### `npm run build`
+- You are ready to launch the project !
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`npm start` will launch the application in your browser at http://localhost:3000, the page will reload if you make edits.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+![memory-screens](https://user-images.githubusercontent.com/75902373/197570104-12588fcb-5060-4f57-993c-07510dd60501.png)
