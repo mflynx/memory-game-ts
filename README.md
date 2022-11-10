@@ -19,8 +19,8 @@ The numbers printed indicate the version installed, if not download [node](https
 - Clone this repo and install the dependencies
 
 ```
-git clone https://github.com/mflynx/open-food-browser.git
-cd open-food-browser
+git clone https://github.com/mflynx/memory-game-ts.git
+cd memory-game-ts
 npm install
 ```
 
